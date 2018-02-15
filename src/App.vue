@@ -9,8 +9,8 @@
         <ul class="menu">
           <li class="list-item home"><a href="/">Home</a></li>
           <li class="list-item archives"><a href="/archives/">Archives</a></li>
-          <li class="list-item projects"><a href="/projects/">Projects</a></li>
-          <li class="list-item gallery"><a href="/gallery/">Gallery</a></li>
+          <li class="list-item projects"><a href="/project/">Projects</a></li>
+          <li class="list-item gallery"><a class="active" href="/gallery/">Gallery</a></li>
           <li class="list-item about"><a href="/about/">About</a></li>
         </ul>
       </nav>
@@ -62,33 +62,44 @@
       box-shadow: 0 0 3px rgba(14, 14, 14, 0.26)
       nav
         padding: 0 80px
+        @media(max-width: 710px)
+          text-align: center
         .logo
           display: inline-block
           padding-top: 5px
           margin-right: 5px
         .title
           display: inline-block
-          transform: translateY(-10px)
+          transform: translateY(-9px)
           line-height: 10px
           font-size: 26px
           color: #4f8b78
         .menu
           float: right
+          @media(max-width: 710px)
+            display: none
+            opacity: 0
           .list-item
             display: inline-block
             margin: 0 8px
             a
-              font-size: 16px
+              font-size: 14px
               color: #34495e
+              padding-bottom: 4px
               &:hover
                 color: #42b983
+              &.active
+                border-bottom: 3px solid #42b983
     .photos
       display: flex
       flex-wrap: wrap
       justify-content: center
       padding: 100px 200px 0 200px
+      @media(max-width: 800px)
+        padding-right: 50px
+        padding-left: 50px
       .photo
-        transform: translateX(20px)
+        transform: translateX(10px)
         flex: 0 0 auto
         height: 198px
         width: 195px
