@@ -34,6 +34,7 @@
     background-color: #fff
     .photo-content
       padding: 9px 7.5px
+      overflow: hidden
     .photo-desc
       position: absolute
       padding: 7.5px 0
